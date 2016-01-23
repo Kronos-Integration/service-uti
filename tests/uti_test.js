@@ -12,9 +12,6 @@ const chai = require('chai'),
   ServiceUTI = require('../service.js');
 
 
-chai.use(require('chai-as-promised'));
-
-
 class _ServiceProvider {}
 class ServiceProvider extends service.ServiceProviderMixin(_ServiceProvider) {}
 
