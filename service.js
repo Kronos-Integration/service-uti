@@ -7,14 +7,12 @@ const path = require('path'),
 	Service = require('kronos-service').Service;
 
 /**
- * collects health state form all components
+ *
  */
 class ServiceUTI extends Service {
 
 	constructor(config) {
 		super(config);
-
-		// TODO how to broadcast health state
 	}
 
 	static get name() {
