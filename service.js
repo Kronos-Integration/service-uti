@@ -26,8 +26,14 @@ class ServiceUTI extends Service {
 	get autostart() {
 		return true;
 	}
+
+	_start() {
+		return uti.initialize({
+			definitionFileName: path.join(__dirname, 'uti.json')
+		});
+	}
 }
 
 module.exports.registerWithManager = manager => {
-	manager.registerService(new ServiceUTI());
+	manager.registerService(ServiceUTI);
 };
