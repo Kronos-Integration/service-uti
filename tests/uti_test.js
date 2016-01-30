@@ -12,16 +12,16 @@ const chai = require('chai'),
   ServiceUTI = require('../service.js');
 
 
-class _ServiceProvider {}
-class ServiceProvider extends service.ServiceProviderMixin(_ServiceProvider) {}
+class ServiceProvider extends service.ServiceProviderMixin(service.Service) {}
 
 const sp = new ServiceProvider();
-
 
 describe('service', () => {
   ServiceUTI.registerWithManager(sp);
 
-  const us = sp.createServiceInstance('uti', {});
+  const us = sp.createServiceFactoryInstanceFromConfig({
+    type: 'uti'
+  });
 
   describe('uti definitions', () => {
     it('should be present', done => {

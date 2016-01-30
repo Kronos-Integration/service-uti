@@ -35,5 +35,5 @@ class ServiceUTI extends Service {
 }
 
 module.exports.registerWithManager = manager => {
-	manager.registerService(ServiceUTI);
+	manager.registerServiceFactory(ServiceUTI);
 };
