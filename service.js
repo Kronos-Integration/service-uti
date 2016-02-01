@@ -34,6 +34,4 @@ class ServiceUTI extends Service {
 	}
 }
 
-module.exports.registerWithManager = manager => {
-	manager.registerServiceFactory(ServiceUTI);
-};
+module.exports.registerWithManager = manager => manager.registerServiceFactory(ServiceUTI);
