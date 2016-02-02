@@ -10,11 +10,6 @@ const path = require('path'),
  *
  */
 class ServiceUTI extends Service {
-
-	constructor(config) {
-		super(config);
-	}
-
 	static get name() {
 		return "uti";
 	}

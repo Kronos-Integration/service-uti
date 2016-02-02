@@ -17,23 +17,24 @@ class ServiceProvider extends service.ServiceProviderMixin(service.Service) {}
 const sp = new ServiceProvider();
 
 describe('service', () => {
-  ServiceUTI.registerWithManager(sp);
-
-  const us = sp.createServiceFactoryInstanceFromConfig({
-    type: 'uti'
-  });
 
   describe('uti definitions', () => {
     it('should be present', done => {
-      us.start().then(() => {
-        try {
-          //console.log(`** ${manager.uti.conformsTo('org.kronos.flow','public.json')}`);
-          assert(uti.conformsTo('org.kronos.flow', 'public.json'),
-            'org.kronos.flow conformsTo public.json');
-          done();
-        } catch (e) {
-          done(e);
-        }
+      return ServiceUTI.registerWithManager(sp).then(() => {
+        const us = sp.createServiceFactoryInstanceFromConfig({
+          type: 'uti'
+        });
+
+        return us.start().then(() => {
+          try {
+            //console.log(`** ${manager.uti.conformsTo('org.kronos.flow','public.json')}`);
+            assert(uti.conformsTo('org.kronos.flow', 'public.json'),
+              'org.kronos.flow conformsTo public.json');
+            done();
+          } catch (e) {
+            done(e);
+          }
+        });
       });
     });
   });
