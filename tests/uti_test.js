@@ -1,4 +1,4 @@
-/* global describe, it, xit */
+/* global describe, it, xit, before, beforeEach, after, afterEach */
 /* jslint node: true, esnext: true */
 
 "use strict";
@@ -11,19 +11,17 @@ const chai = require('chai'),
   uti = require('uti'),
   ServiceUTI = require('../service.js');
 
-
 class ServiceProvider extends service.ServiceProviderMixin(service.Service) {}
 
 const sp = new ServiceProvider();
 
 describe('service', () => {
-
   describe('uti definitions', () => {
     it('should be present', done => {
       return ServiceUTI.registerWithManager(sp).then(() => {
         const us = sp.createServiceFactoryInstanceFromConfig({
           type: 'uti'
-        });
+        }, sp);
 
         return us.start().then(() => {
           try {
