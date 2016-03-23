@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-service-uti#readme",
   "dependencies": {
-    "kronos-service": "2.12.2",
+    "kronos-service": "2.12.3",
     "uti": "1.10.1"
   },
   "devDependencies": {
