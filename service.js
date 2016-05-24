@@ -1,6 +1,6 @@
 /* jslint node: true, esnext: true */
 
-"use strict";
+'use strict';
 
 const path = require('path'),
 	uti = require('uti'),
@@ -11,7 +11,7 @@ const path = require('path'),
  */
 class ServiceUTI extends Service {
 	static get name() {
-		return "uti";
+		return 'uti';
 	}
 
 	get type() {
