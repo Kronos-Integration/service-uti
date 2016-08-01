@@ -17,21 +17,16 @@ const sp = new ServiceProvider();
 
 describe('service', () => {
   describe('uti definitions', () => {
-    it('should be present', done => {
+    it('should be present', () => {
       return ServiceUTI.registerWithManager(sp).then(() => {
         const us = sp.createServiceFactoryInstanceFromConfig({
           type: 'uti'
         }, sp);
 
         return us.start().then(() => {
-          try {
-            //console.log(`** ${manager.uti.conformsTo('org.kronos.flow','public.json')}`);
-            assert(uti.conformsTo('org.kronos.flow', 'public.json'),
-              'org.kronos.flow conformsTo public.json');
-            done();
-          } catch (e) {
-            done(e);
-          }
+          //console.log(`** ${manager.uti.conformsTo('org.kronos.flow','public.json')}`);
+          assert(uti.conformsTo('org.kronos.flow', 'public.json'),
+            'org.kronos.flow conformsTo public.json');
         });
       });
     });
