@@ -14,10 +14,6 @@ class ServiceUTI extends Service {
 		return 'uti';
 	}
 
-	get type() {
-		return ServiceUTI.name;
-	}
-
 	get autostart() {
 		return true;
 	}
