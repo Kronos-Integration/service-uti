@@ -7,18 +7,22 @@ const chai = require('chai'),
   assert = chai.assert,
   expect = chai.expect,
   should = chai.should(),
-  service = require('kronos-service'),
+  {
+    Service, ServiceProviderMixin
+  } = require('kronos-service'),
   uti = require('uti'),
-  ServiceUTI = require('../service.js');
+  {
+    ServiceUTI, registerWithManager
+  } = require('../dist/module.js');
 
-class ServiceProvider extends service.ServiceProviderMixin(service.Service) {}
+class ServiceProvider extends ServiceProviderMixin(Service) {}
 
 const sp = new ServiceProvider();
 
 describe('service', () => {
   describe('uti definitions', () => {
     it('should be present', () => {
-      return ServiceUTI.registerWithManager(sp).then(() => {
+      return registerWithManager(sp).then(() => {
         const us = sp.createServiceFactoryInstanceFromConfig({
           type: 'uti'
         }, sp);
