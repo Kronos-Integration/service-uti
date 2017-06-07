@@ -30,14 +30,14 @@
     "uti": "1.13.0"
   },
   "devDependencies": {
-    "chai": "^4.0.1",
+    "chai": "^4.0.2",
     "cz-conventional-changelog": "^2.0.0",
     "mocha": "^3.4.2",
     "semantic-release": "^6.3.6",
     "jsdoc-to-markdown": "^3.0.0",
     "markdown-doctest": "^0.9.1",
-    "rollup": "^0.41.6",
-    "nyc": "^11.0.1"
+    "rollup": "^0.42.0",
+    "nyc": "^11.0.2"
   },
   "contributors": [
     {
