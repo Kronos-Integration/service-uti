@@ -12,14 +12,14 @@
     "test": "mocha tests/*_test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "docs": "jsdoc2md -l off -t doc/README.hbs -f src/*.js >README.md",
-    "prepublish": "rollup --output=dist/module.js -c -- src/ServiceUTI.js",
-    "pretest": "npm run prepublish",
+    "pretest": "rollup -c",
     "posttest": "markdown-doctest",
-    "precover": "npm run prepublish"
+    "precover": "rollup -c",
+    "prepare": "rollup -c"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kronos-Integration/kronos-service-uti.git"
+    "url": "git+https://github.com/Kronos-Integration/kronos-service-uti.git"
   },
   "bugs": {
     "url": "https://github.com/Kronos-Integration/kronos-service-uti/issues"
@@ -27,17 +27,16 @@
   "homepage": "https://github.com/Kronos-Integration/kronos-service-uti#readme",
   "dependencies": {
     "kronos-service": "^4.5.1",
-    "uti": "1.13.0"
+    "uti": "2.1.0"
   },
   "devDependencies": {
-    "chai": "^4.0.2",
-    "cz-conventional-changelog": "^2.0.0",
-    "mocha": "^3.4.2",
-    "semantic-release": "^6.3.6",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.2",
+    "semantic-release": "^8.0.0",
     "jsdoc-to-markdown": "^3.0.0",
     "markdown-doctest": "^0.9.1",
-    "rollup": "^0.42.0",
-    "nyc": "^11.0.2"
+    "rollup": "^0.49.3",
+    "nyc": "^11.2.1"
   },
   "contributors": [
     {
@@ -51,12 +50,7 @@
   ],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=7.10.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "node": ">=8.4.0"
   },
   "nyc": {
     "include": [
@@ -71,5 +65,8 @@
     "repository": {
       "url": "https://github.com/Kronos-Tools/npm-package-template.git"
     }
+  },
+  "xo": {
+    "space": true
   }
 }

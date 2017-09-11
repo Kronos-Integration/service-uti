@@ -10,7 +10,6 @@ const chai = require('chai'),
   {
     Service, ServiceProviderMixin
   } = require('kronos-service'),
-  uti = require('uti'),
   {
     ServiceUTI, registerWithManager
   } = require('../dist/module.js');
@@ -29,7 +28,7 @@ describe('service', () => {
 
         return us.start().then(() => {
           //console.log(`** ${manager.uti.conformsTo('org.kronos.flow','public.json')}`);
-          assert(uti.conformsTo('org.kronos.flow', 'public.json'),
+          assert(us.controller.conformsTo('org.kronos.flow', 'public.json'),
             'org.kronos.flow conformsTo public.json');
         });
       });

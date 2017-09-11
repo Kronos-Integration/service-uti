@@ -3,7 +3,9 @@
 'use strict';
 
 const path = require('path'),
-	uti = require('uti');
+	{
+		UTIController
+	} = require('uti');
 
 import {
 	Service
@@ -23,9 +25,10 @@ class ServiceUTI extends Service {
 	}
 
 	_start() {
-		return uti.initialize({
-			definitionFileName: path.join(__dirname, '..', 'uti.json')
-		});
+		this.controller = new UTIController();
+		return this.controller.initializeBuildin().then(() =>
+			this.controller.loadDefinitionsFromFile(path.join(__dirname, '..', 'uti.json'))
+		);
 	}
 }
 
