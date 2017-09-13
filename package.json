@@ -2,7 +2,9 @@
   "name": "kronos-service-uti",
   "version": "0.0.0-semantic-release",
   "description": "uti provider service",
-  "keywords": ["kronos-service"],
+  "keywords": [
+    "kronos-service"
+  ],
   "module": "src/ServiceUTI.js",
   "main": "dist/module.js",
   "scripts": {
@@ -29,7 +31,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^3.5.2",
+    "mocha": "^3.5.3",
     "semantic-release": "^8.0.0",
     "jsdoc-to-markdown": "^3.0.0",
     "markdown-doctest": "^0.9.1",
@@ -48,11 +50,15 @@
   ],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=8.4.0"
+    "node": ">=8.5.0"
   },
   "nyc": {
-    "include": ["dist/**/*.js"],
-    "reporter": ["lcov"],
+    "include": [
+      "dist/**/*.js"
+    ],
+    "reporter": [
+      "lcov"
+    ],
     "report-dir": "./coverage"
   },
   "template": {
