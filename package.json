@@ -9,7 +9,7 @@
   "main": "dist/module.js",
   "scripts": {
     "cover": "nyc npm test",
-    "test": "mocha tests/*_test.js",
+    "test": "mocha tests/*-test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "docs": "jsdoc2md -l off -t doc/README.hbs -f src/*.js >README.md",
     "pretest": "rollup -c",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^3.5.2",
+    "mocha": "^3.5.3",
     "semantic-release": "^8.0.0",
     "jsdoc-to-markdown": "^3.0.0",
     "markdown-doctest": "^0.9.1",
@@ -50,7 +50,7 @@
   ],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=8.4.0"
+    "node": ">=8.5.0"
   },
   "nyc": {
     "include": [
