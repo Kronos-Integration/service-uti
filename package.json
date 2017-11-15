@@ -5,8 +5,8 @@
   "keywords": [
     "kronos-service"
   ],
-  "module": "src/ServiceUTI.js",
-  "main": "dist/module.js",
+  "module": "src/service-uti.js",
+  "main": "dist/service-uti.js",
   "scripts": {
     "cover": "nyc --temp-directory build/nyc ava",
     "test": "ava",
@@ -58,12 +58,13 @@
   },
   "nyc": {
     "include": [
-      "dist/**/*.js"
+      "build/*-test.js",
+      "src/**/*.js"
     ],
     "reporter": [
       "lcov"
     ],
-    "report-dir": "./coverage"
+    "report-dir": "./build/coverage"
   },
   "template": {
     "repository": {

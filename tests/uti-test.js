@@ -1,37 +1,21 @@
-/* global describe, it, xit, before, beforeEach, after, afterEach */
-/* jslint node: true, esnext: true */
-
-'use strict';
-
-const chai = require('chai'),
-  assert = chai.assert,
-  expect = chai.expect,
-  should = chai.should(),
-  {
-    Service, ServiceProviderMixin
-  } = require('kronos-service'),
-  {
-    ServiceUTI, registerWithManager
-  } = require('../dist/module.js');
+import test from 'ava';
+import { Service, ServiceProviderMixin } from 'kronos-service';
+import { ServiceUTI, registerWithManager } from '../src/service-uti';
 
 class ServiceProvider extends ServiceProviderMixin(Service) {}
 
-const sp = new ServiceProvider();
+test('service uti definitions should be present', async t => {
+  const sp = new ServiceProvider();
+  await registerWithManager(sp);
 
-describe('service', () => {
-  describe('uti definitions', () => {
-    it('should be present', () => {
-      return registerWithManager(sp).then(() => {
-        const us = sp.createServiceFactoryInstanceFromConfig({
-          type: 'uti'
-        }, sp);
+  const us = sp.createServiceFactoryInstanceFromConfig(
+    {
+      type: 'uti'
+    },
+    sp
+  );
 
-        return us.start().then(() => {
-          //console.log(`** ${manager.uti.conformsTo('org.kronos.flow','public.json')}`);
-          assert(us.controller.conformsTo('org.kronos.flow', 'public.json'),
-            'org.kronos.flow conformsTo public.json');
-        });
-      });
-    });
-  });
+  await us.start();
+
+  t.is(us.controller.conformsTo('org.kronos.flow', 'public.json'), true);
 });

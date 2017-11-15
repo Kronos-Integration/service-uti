@@ -2,7 +2,7 @@ import pkg from './package.json';
 
 export default {
   plugins: [],
-  external: ['kronos-service'],
+  external: ['kronos-service', 'uti'],
   input: pkg.module,
 
   output: {
