@@ -30,7 +30,7 @@
     "lint": "documentation lint src/service-uti.js"
   },
   "dependencies": {
-    "kronos-service": "^4.10.0",
+    "kronos-service": "^4.13.5",
     "uti": "3.1.0"
   },
   "devDependencies": {
