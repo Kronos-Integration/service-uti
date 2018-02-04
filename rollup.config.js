@@ -1,8 +1,10 @@
 import pkg from './package.json';
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 
 export default {
-  plugins: [],
-  external: ['kronos-service', 'uti'],
+  plugins: [resolve(), commonjs()],
+  external: ['kronos-service', 'uti', 'path'],
   input: pkg.module,
 
   output: {

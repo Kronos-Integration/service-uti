@@ -1,7 +1,6 @@
 import { UTIController } from 'uti';
 import { Service } from 'kronos-service';
-
-const path = require('path');
+import { join } from 'path';
 
 /**
  * UTI provider
@@ -27,7 +26,7 @@ export class ServiceUTI extends Service {
     await this.controller.initializeBuildin();
 
     await this.controller.loadDefinitionsFromFile(
-      path.join(__dirname, '..', 'uti.json')
+      join(__dirname, '..', 'uti.json')
     );
   }
 }
