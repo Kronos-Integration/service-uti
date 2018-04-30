@@ -37,7 +37,7 @@
     "uti": "3.1.1"
   },
   "devDependencies": {
-    "semantic-release": "^15.1.7",
+    "semantic-release": "^15.1.8",
     "markdown-doctest": "^0.9.1",
     "rollup": "^0.58.2",
     "nyc": "^11.7.1",
@@ -46,7 +46,7 @@
     "documentation": "^6.3.2",
     "travis-deploy-once": "^5.0.0",
     "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-commonjs": "^9.1.0"
+    "rollup-plugin-commonjs": "^9.1.1"
   },
   "engines": {
     "node": ">=8.11"
