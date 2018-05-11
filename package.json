@@ -37,7 +37,7 @@
     "uti": "3.1.1"
   },
   "devDependencies": {
-    "semantic-release": "^15.4.0",
+    "semantic-release": "^15.4.1",
     "markdown-doctest": "^0.9.1",
     "rollup": "^0.58.2",
     "nyc": "^11.7.3",
