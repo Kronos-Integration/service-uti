@@ -1,6 +1,9 @@
 {
   "name": "kronos-service-uti",
   "version": "0.0.0-semantic-release",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/service-uti.js",
   "module": "src/service-uti.js",
   "description": "uti provider service",
@@ -40,7 +43,7 @@
     "semantic-release": "^15.5.0",
     "markdown-doctest": "^0.9.1",
     "rollup": "^0.59.4",
-    "nyc": "^11.8.0",
+    "nyc": "^12.0.1",
     "ava": "^0.25.0",
     "rollup-plugin-multi-entry": "^2.0.2",
     "documentation": "^7.1.0",
