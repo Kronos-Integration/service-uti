@@ -1,6 +1,7 @@
-import { UTIController } from 'uti';
-import { Service } from 'kronos-service';
-import { join } from 'path';
+import { UTIController } from "uti";
+import { Service } from "kronos-service";
+import { join } from "path";
+const { promises } = require("fs");
 
 /**
  * UTI provider
@@ -10,7 +11,7 @@ export class ServiceUTI extends Service {
    * @return {string} 'uti'
    */
   static get name() {
-    return 'uti';
+    return "uti";
   }
 
   /**
@@ -23,10 +24,13 @@ export class ServiceUTI extends Service {
 
   async _start() {
     this.controller = new UTIController();
-    await this.controller.initializeBuildin();
 
-    await this.controller.loadDefinitionsFromFile(
-      join(__dirname, '..', 'uti.json')
+    this.controller.register(
+      JSON.parse(
+        await promises.readFile(join(__dirname, "..", "uti.json"), {
+          encoding: "utf8"
+        })
+      )
     );
   }
 }
