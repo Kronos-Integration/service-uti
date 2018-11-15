@@ -72,8 +72,7 @@
     "files": [
       "tests/*-test.js",
       "tests/*-test.mjs"
-    ],
-    "presets": []
+    ]
   },
   "template": {
     "repository": {
