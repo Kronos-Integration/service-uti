@@ -30,7 +30,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "kronos-service": "^4.17.1",
+    "kronos-service": "^4.17.2",
     "rollup-plugin-commonjs": "^9.0.0",
     "rollup-plugin-node-resolve": "^4.0.0",
     "uti": "6.0.0"
