@@ -7,7 +7,6 @@
 [![Coverage Status](https://coveralls.io/repos/Kronos-Integration/kronos-service-uti/badge.svg)](https://coveralls.io/r/Kronos-Integration/kronos-service-uti)
 [![Known Vulnerabilities](https://snyk.io/test/github/Kronos-Integration/kronos-service-uti/badge.svg)](https://snyk.io/test/github/Kronos-Integration/kronos-service-uti)
 [![GitHub Issues](https://img.shields.io/github/issues/Kronos-Integration/kronos-service-uti.svg?style=flat-square)](https://github.com/Kronos-Integration/kronos-service-uti/issues)
-[![Stories in Ready](https://badge.waffle.io/Kronos-Integration/kronos-service-uti.svg?label=ready&title=Ready)](http://waffle.io/Kronos-Integration/kronos-service-uti)
 [![Dependency Status](https://david-dm.org/Kronos-Integration/kronos-service-uti.svg)](https://david-dm.org/Kronos-Integration/kronos-service-uti)
 [![devDependency Status](https://david-dm.org/Kronos-Integration/kronos-service-uti/dev-status.svg)](https://david-dm.org/Kronos-Integration/kronos-service-uti#info=devDependencies)
 [![docs](http://inch-ci.org/github/Kronos-Integration/kronos-service-uti.svg?branch=master)](http://inch-ci.org/github/Kronos-Integration/kronos-service-uti)
