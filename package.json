@@ -33,7 +33,7 @@
     "kronos-service": "^4.17.2",
     "rollup-plugin-commonjs": "^9.0.0",
     "rollup-plugin-node-resolve": "^5.0.1",
-    "uti": "6.1.1"
+    "uti": "6.2.0"
   },
   "devDependencies": {
     "ava": "^1.4.1",
