@@ -1,12 +1,12 @@
 {
-  "name": "kronos-service-uti",
+  "name": "@kronos-integration/service-uti",
   "version": "0.0.0-semantic-release",
   "type": "module",
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/service-uti.js",
-  "module": "src/service-uti.js",
+  "main": "src/service-uti.mjs",
+  "module": "src/service-uti.mjs",
   "description": "uti provider service",
   "keywords": [
     "kronos-service"
@@ -24,31 +24,22 @@
   "license": "BSD-2-Clause",
   "scripts": {
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
-    "docs": "documentation readme src/service-uti.js --section=API",
-    "lint": "documentation lint src/service-uti.js",
+    "docs": "documentation readme src/service-uti.mjs --section=API",
+    "lint": "documentation lint src/service-uti.mjs",
     "posttest": "npm run prepare && markdown-doctest",
     "prepare": "rollup -c",
     "test": "ava"
   },
   "dependencies": {
-    "kronos-service": "^4.17.2",
-    "rollup-plugin-commonjs": "^10.0.1",
-    "rollup-plugin-node-resolve": "^5.1.0",
+    "@kronos-integration/service": "^5.0.0",
     "uti": "6.2.0"
   },
   "devDependencies": {
     "ava": "^2.4.0",
-    "builtin-modules": "^3.1.0",
     "c8": "^6.0.1",
     "documentation": "^12.1.3",
     "esm": "^3.2.25",
     "markdown-doctest": "^1.0.0",
-    "rollup": "^1.27.0",
-    "rollup-plugin-cleanup": "^3.1.1",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-executable": "^1.5.1",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
     "semantic-release": "^15.13.30"
   },
   "engines": {

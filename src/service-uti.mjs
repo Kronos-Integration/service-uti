@@ -1,12 +1,12 @@
 import { UTIController } from "uti";
 import { Service } from "kronos-service";
 import { join } from "path";
-const { promises } = require("fs");
+import fs from "fs";
 
 /**
  * UTI provider
  */
-export class ServiceUTI extends Service {
+export default class ServiceUTI extends Service {
   /**
    * @return {string} 'uti'
    */
@@ -27,14 +27,10 @@ export class ServiceUTI extends Service {
 
     this.controller.register(
       JSON.parse(
-        await promises.readFile(join(__dirname, "..", "uti.json"), {
+        await fs.promises.readFile(join(__dirname, "..", "uti.json"), {
           encoding: "utf8"
         })
       )
     );
   }
-}
-
-export function registerWithManager(manager) {
-  return manager.registerServiceFactory(ServiceUTI);
 }
