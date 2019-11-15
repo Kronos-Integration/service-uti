@@ -1,7 +1,8 @@
-import { UTIController } from "uti";
-import { Service } from "kronos-service";
-import { join } from "path";
+import { join,dirname } from "path";
 import fs from "fs";
+import { fileURLToPath } from "url";
+import { UTIController } from "uti";
+import { Service } from '@kronos-integration/service';
 
 /**
  * UTI provider
@@ -27,7 +28,7 @@ export default class ServiceUTI extends Service {
 
     this.controller.register(
       JSON.parse(
-        await fs.promises.readFile(join(__dirname, "..", "uti.json"), {
+        await fs.promises.readFile(join(dirname(fileURLToPath(import.meta.url)), "..", "uti.json"), {
           encoding: "utf8"
         })
       )

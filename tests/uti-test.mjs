@@ -1,18 +1,14 @@
 import test from 'ava';
-import { Service, ServiceProviderMixin } from 'kronos-service';
-import { ServiceUTI, registerWithManager } from '../src/service-uti';
-
-class ServiceProvider extends ServiceProviderMixin(Service) {}
+import { StandaloneServiceProvider } from '@kronos-integration/service';
+import  ServiceUTI from '../src/service-uti.mjs';
 
 test('service uti definitions should be present', async t => {
-  const sp = new ServiceProvider();
-  await registerWithManager(sp);
+  const sp = new StandaloneServiceProvider();
 
-  const us = sp.createServiceFactoryInstanceFromConfig(
+  const us = await sp.declareService(
     {
-      type: 'uti'
-    },
-    sp
+      type: ServiceUTI
+    }
   );
 
   await us.start();

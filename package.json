@@ -26,12 +26,11 @@
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
     "docs": "documentation readme src/service-uti.mjs --section=API",
     "lint": "documentation lint src/service-uti.mjs",
-    "posttest": "npm run prepare && markdown-doctest",
-    "prepare": "rollup -c",
+    "posttest": "markdown-doctest",
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-integration/service": "^5.0.0",
+    "@kronos-integration/service": "^6.0.0",
     "uti": "6.2.0"
   },
   "devDependencies": {
