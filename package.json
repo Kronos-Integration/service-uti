@@ -30,7 +30,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-integration/service": "^6.0.2",
+    "@kronos-integration/service": "^6.1.0",
     "uti": "6.2.0"
   },
   "devDependencies": {
