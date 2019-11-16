@@ -46,12 +46,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kronos-Integration/kronos-service-uti.git"
+    "url": "https://github.com/Kronos-Integration/service-uti.git"
   },
   "bugs": {
-    "url": "https://github.com/Kronos-Integration/kronos-service-uti/issues"
+    "url": "https://github.com/Kronos-Integration/service-uti/issues"
   },
-  "homepage": "https://github.com/Kronos-Integration/kronos-service-uti#readme",
+  "homepage": "https://github.com/Kronos-Integration/service-uti#readme",
   "ava": {
     "require": [
       "esm"
