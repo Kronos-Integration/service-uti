@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@kronos-integration/service": "^8.3.14",
-    "uti": "6.3.0"
+    "uti": "6.3.1"
   },
   "devDependencies": {
     "ava": "^2.4.0",
