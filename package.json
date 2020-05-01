@@ -7,6 +7,9 @@
   "sideEffects": false,
   "type": "module",
   "main": "src/service-uti.mjs",
+  "exports": {
+    ".": "./src/service-uti.mjs"
+  },
   "description": "uti provider service",
   "keywords": [
     "kronos-service"
