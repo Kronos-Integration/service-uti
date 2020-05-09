@@ -1,11 +1,11 @@
 import { UTIController } from "uti";
-import { Service } from '@kronos-integration/service';
-import additional from './additional-utis.mjs';
+import { Service } from "@kronos-integration/service";
+import additional from "./additional-utis.mjs";
 
 /**
  * UTI provider
  */
-export default class ServiceUTI extends Service {
+export class ServiceUTI extends Service {
   /**
    * @return {string} 'uti'
    */
@@ -26,3 +26,5 @@ export default class ServiceUTI extends Service {
     this.controller.register(additional);
   }
 }
+
+export default ServiceUTI;

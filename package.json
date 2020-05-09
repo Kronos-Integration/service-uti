@@ -6,14 +6,15 @@
   },
   "sideEffects": false,
   "type": "module",
-  "main": "src/service-uti.mjs",
+  "main": "./src/service-uti.mjs",
   "exports": {
-    ".": "src/service-uti.mjs",
+    ".": "./src/service-uti.mjs",
     "./": "./"
   },
   "description": "uti provider service",
   "keywords": [
-    "kronos-service"
+    "kronos-service",
+    "UTI"
   ],
   "contributors": [
     {
@@ -29,11 +30,11 @@
   "scripts": {
     "test": "ava --timeout 2m",
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
-    "docs": "documentation readme src/service-uti.mjs --section=API",
-    "lint": "documentation lint src/service-uti.mjs"
+    "docs": "documentation readme ./src/service-uti.mjs --section=API",
+    "lint": "documentation lint ./src/service-uti.mjs"
   },
   "dependencies": {
-    "@kronos-integration/service": "^8.3.23",
+    "@kronos-integration/service": "^8.3.27",
     "uti": "^6.3.4"
   },
   "devDependencies": {
