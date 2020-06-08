@@ -12,8 +12,8 @@
   },
   "description": "uti provider service",
   "keywords": [
-    "kronos-service",
-    "UTI"
+    "UTI",
+    "kronos-service"
   ],
   "contributors": [
     {
