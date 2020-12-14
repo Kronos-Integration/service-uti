@@ -33,7 +33,7 @@
     "lint:docs": "documentation lint ./src/service-uti.mjs"
   },
   "dependencies": {
-    "@kronos-integration/endpoint": "^9.3.2",
+    "@kronos-integration/endpoint": "^9.3.3",
     "@kronos-integration/service": "^10.0.4",
     "uti": "^6.3.7"
   },
