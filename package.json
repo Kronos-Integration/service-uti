@@ -48,7 +48,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kronos-Integration/service-uti.git"
+    "url": "https://github.com/Kronos-Integration/service-uti"
   },
   "bugs": {
     "url": "https://github.com/Kronos-Integration/service-uti/issues"
