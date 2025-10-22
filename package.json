@@ -35,7 +35,7 @@
   "dependencies": {
     "@kronos-integration/endpoint": "^10.1.19",
     "@kronos-integration/service": "^13.2.40",
-    "uti": "^8.10.0"
+    "uti": "^8.10.2"
   },
   "devDependencies": {
     "ava": "^6.1.3",
